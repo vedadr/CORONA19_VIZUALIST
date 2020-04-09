@@ -1,0 +1,756 @@
+<survey GUID="00507d14-10eb-42a5-a0a3-792496cfd594" Visible="true" GeoTypeTreeNodeExpanded="true" GeoCorrespondenceTreeNodeExpanded="false" name="COVID19" DisplayName="Coronavirus Case Data" year="2020" Categories="">
+  <Description><![CDATA[]]></Description>
+  <notes><![CDATA[]]></notes>
+  <PrivateNotes><![CDATA[]]></PrivateNotes>
+  <documentation Label="Documentation">
+    <documentlinks/>
+  </documentation>
+  <geoTypes>
+    <geoType GUID="824584f1-8ed8-4a25-911a-3ba8585d5661" Name="SL010" Label="Nation" QLabel="Nation" RelevantGeoIDs="FIPS,NAME,QName,NATION,STATE,COUNTY" PluralName="Nation" fullCoverage="true" majorGeo="true" Indent="0" Sumlev="010" FipsCodeLength="0" FipsCodeFieldName="FIPS" FipsCodePartialFieldName="NATION" FipsCodePartialLength="0">
+      <Visible>true</Visible>
+    </geoType>
+    <geoType GUID="1f9b8b92-f608-488e-aed2-e91bcf69a89c" Name="SL040" Label="State" QLabel="State" RelevantGeoIDs="FIPS,NAME,QName,NATION,STATE,COUNTY" PluralName="State" fullCoverage="true" majorGeo="true" Indent="1" Sumlev="040" FipsCodeLength="2" FipsCodeFieldName="FIPS" FipsCodePartialFieldName="STATE" FipsCodePartialLength="2">
+      <Visible>true</Visible>
+    </geoType>
+    <geoType GUID="6f453aec-d757-48aa-8def-c7a25a809d4d" Name="SL050" Label="County" QLabel="County" RelevantGeoIDs="FIPS,NAME,QName,NATION,STATE,COUNTY" PluralName="County" fullCoverage="true" majorGeo="true" Indent="2" Sumlev="050" FipsCodeLength="5" FipsCodeFieldName="FIPS" FipsCodePartialFieldName="COUNTY" FipsCodePartialLength="3">
+      <Visible>true</Visible>
+    </geoType>
+  </geoTypes>
+  <GeoSurveyDataset GUID="5b7c392b-2834-4aca-9b21-67f328a3a239" SurveyDatasetTreeNodeExpanded="true" TablesTreeNodeExpanded="true" IterationsTreeNodeExpanded="false" DatasetsTreeNodeExpanded="true" Description="Geographic Summary Count" Visible="false" abbreviation="Geo" name="Geography Summary File" DisplayName="Geography Summary File">
+    <DataBibliographicInfo/>
+    <notes/>
+    <PrivateNotes><![CDATA[]]></PrivateNotes>
+    <Description><![CDATA[]]></Description>
+    <datasets>
+      <dataset GUID="d717d544-96db-430e-8341-ca4d0e30f941" GeoTypeName="SL010" DbConnString="Server=prime; database=; uid=sewebsite3;pwd=granted128;Connect Timeout=1;Pooling=True" DbName="covid_data" GeoIdDbTableName="COVID19_SL010_001" IsCached="false" DbTableNamePrefix="COVID19_SL010_" DbPrimaryKey="SL010_FIPS" DbCopyCount="1"/>
+      <dataset GUID="27acb3b1-89eb-4c2c-8ef2-1d60b678bb99" GeoTypeName="SL040" DbConnString="Server=prime; database=; uid=sewebsite3;pwd=granted128;Connect Timeout=1;Pooling=True" DbName="covid_data" GeoIdDbTableName="COVID19_SL040_001" IsCached="false" DbTableNamePrefix="COVID19_SL040_" DbPrimaryKey="SL040_FIPS" DbCopyCount="1"/>
+      <dataset GUID="8d3124f2-4e8a-4ef5-a814-472a5491bd33" GeoTypeName="SL050" DbConnString="Server=prime; database=; uid=sewebsite3;pwd=granted128;Connect Timeout=1;Pooling=True" DbName="covid_data" GeoIdDbTableName="COVID19_SL050_001" IsCached="false" DbTableNamePrefix="COVID19_SL050_" DbPrimaryKey="SL040_FIPS,SL050_FIPS" DbCopyCount="1"/>
+    </datasets>
+    <iterations/>
+    <tables>
+      <table GUID="9ac7bcd8-8a56-4b27-b842-13bb37a96ddf" VariablesAreExclusive="false" notes="" PrivateNotes="" DollarYear="0" PercentBaseMin="1" name="G001" displayName="G1." title="Geography Identifiers" titleWrapped="Geography Identifiers" titleShort="" universe="none" Visible="false" TreeNodeCollapsed="true" DocSectionLinks="" DataCategories="" ProductTags="" FilterRuleName="" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="001" uniqueTableId="G001" source="" DefaultColumnCaption="" samplingInfo="">
+        <OutputFormat TableTitle="" TableUniverse="">
+          <Columns/>
+        </OutputFormat>
+        <variable GUID="adcfd5b3-02f8-4f28-8d67-05b92d6ed795" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="QNAME" label="Qualifying Name" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="0" DocLinksAsString="" AggregationStr="None"/>
+        <variable GUID="fb9ab86c-3f09-4ebe-ac36-a8cee7df0968" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="NAME" label="Name of Area" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="0" DocLinksAsString="" AggregationStr="None"/>
+        <variable GUID="0f5b0cec-dd78-40aa-92d5-9d5feeba7471" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="FIPS" label="FIPS" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="0" DocLinksAsString="" AggregationStr="None"/>
+        <variable GUID="979df4c2-07c4-4862-af5b-642c5f333fcb" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="NATION" label="Nation" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="0" DocLinksAsString="" AggregationStr="None"/>
+        <variable GUID="b66d8a7d-401c-46f1-b4da-a277a069728d" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="STATE" label="State" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="0" DocLinksAsString="" AggregationStr="None"/>
+        <variable GUID="725af2bc-4ddc-411a-8bff-e5b821fcdc61" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COUNTY" label="County" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="0" DocLinksAsString="" AggregationStr="None"/>
+      </table>
+    </tables>
+  </GeoSurveyDataset>
+  <SurveyDatasets>
+    <SurveyDataset GUID="9dcccacc-6282-4282-a3b0-43efee5ecd62" SurveyDatasetTreeNodeExpanded="true" TablesTreeNodeExpanded="true" IterationsTreeNodeExpanded="false" DatasetsTreeNodeExpanded="true" Description="" Visible="false" abbreviation="SE" name="Social Explorer Tables" DisplayName="Social Explorer Tables">
+      <DataBibliographicInfo/>
+      <notes/>
+      <PrivateNotes><![CDATA[]]></PrivateNotes>
+      <Description><![CDATA[]]></Description>
+      <datasets>
+        <dataset GUID="853975e4-83c1-4cca-bd1b-80a94d88543e" GeoTypeName="SL010" DbConnString="Server=prime; database=; uid=sewebsite3;pwd=granted128;Connect Timeout=1;Pooling=True" DbName="covid_data" GeoIdDbTableName="COVID19_SL010_001" IsCached="false" DbTableNamePrefix="COVID19_SL010_" DbPrimaryKey="SL010_FIPS" DbCopyCount="1"/>
+        <dataset GUID="73ff339d-5618-4f50-92f0-3195b82693fb" GeoTypeName="SL040" DbConnString="Server=prime; database=; uid=sewebsite3;pwd=granted128;Connect Timeout=1;Pooling=True" DbName="covid_data" GeoIdDbTableName="COVID19_SL040_001" IsCached="false" DbTableNamePrefix="COVID19_SL040_" DbPrimaryKey="SL040_FIPS" DbCopyCount="1"/>
+        <dataset GUID="ea279060-798a-4e25-ab0e-e968e0453eb7" GeoTypeName="SL050" DbConnString="Server=prime; database=; uid=sewebsite3;pwd=granted128;Connect Timeout=1;Pooling=True" DbName="covid_data" GeoIdDbTableName="COVID19_SL050_001" IsCached="false" DbTableNamePrefix="COVID19_SL050_" DbPrimaryKey="SL040_FIPS,SL050_FIPS" DbCopyCount="1"/>
+      </datasets>
+      <iterations/>
+      <tables>
+        <!--Insert SE tables here !!!-->
+      </tables>
+    </SurveyDataset>
+    <SurveyDataset GUID="2b5acc9d-dfea-495c-a1df-35ec5331d03c" SurveyDatasetTreeNodeExpanded="true" TablesTreeNodeExpanded="true" IterationsTreeNodeExpanded="false" DatasetsTreeNodeExpanded="true" Description="" Visible="true" abbreviation="ORG" name="Original Tables" DisplayName="Original Tables">
+      <DataBibliographicInfo/>
+      <notes/>
+      <PrivateNotes><![CDATA[]]></PrivateNotes>
+      <Description><![CDATA[]]></Description>
+      <datasets>
+        <dataset GUID="fe0e7cce-35d9-49dd-ab5c-44885467ca7a" GeoTypeName="SL010" DbConnString="Server=prime; database=; uid=sewebsite3;pwd=granted128;Connect Timeout=1;Pooling=True" DbName="covid_data" GeoIdDbTableName="COVID19_SL010_001" IsCached="false" DbTableNamePrefix="COVID19_SL010_" DbPrimaryKey="SL010_FIPS" DbCopyCount="1"/>
+        <dataset GUID="628c3521-c71e-417d-a30d-45fe004c7217" GeoTypeName="SL040" DbConnString="Server=prime; database=; uid=sewebsite3;pwd=granted128;Connect Timeout=1;Pooling=True" DbName="covid_data" GeoIdDbTableName="COVID19_SL040_001" IsCached="false" DbTableNamePrefix="COVID19_SL040_" DbPrimaryKey="SL040_FIPS" DbCopyCount="1"/>
+        <dataset GUID="024c5801-d406-4e06-afcf-df8472207776" GeoTypeName="SL050" DbConnString="Server=prime; database=; uid=sewebsite3;pwd=granted128;Connect Timeout=1;Pooling=True" DbName="covid_data" GeoIdDbTableName="COVID19_SL050_001" IsCached="false" DbTableNamePrefix="COVID19_SL050_" DbPrimaryKey="SL040_FIPS,SL050_FIPS" DbCopyCount="1"/>
+      </datasets>
+      <iterations/>
+      <tables>
+        <table GUID="db608355-431f-4db3-b0da-63f4c444e309" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_001" displayName="COVID19_001" DataCategories="COVID-19;" title="Jan_21_2020" titleWrapped="Jan_21_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="001" uniqueTableId="COVID19_001">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="e6df53ec-b787-45ff-a937-ced30464042c" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_001_Jan_21_2020_cases" label="Number of Cases on Jan 21 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="fa0becb3-3f7f-4942-bb9a-f9ba802b9c28" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_001_Jan_21_2020_deaths" label="Number of Deaths on Jan 21 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="e1a4a01f-2462-4d29-884a-fa84a10faccc" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_001_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="380770a1-2558-41fb-948a-5d2de38da8f8" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_002" displayName="COVID19_002" DataCategories="COVID-19;" title="Jan_22_2020" titleWrapped="Jan_22_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="002" uniqueTableId="COVID19_002">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="aebfadd3-ab99-4b8f-b2d0-c5332b7f38cd" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_002_Jan_22_2020_cases" label="Number of Cases on Jan 22 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="bd3c4da5-4263-4288-98f1-24cc35e79595" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_002_Jan_22_2020_deaths" label="Number of Deaths on Jan 22 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="7e8340a2-447b-4b2f-a374-e2a4db180e2d" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_002_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="79401823-0adc-47c1-98e0-dbfc30f2cb95" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_003" displayName="COVID19_003" DataCategories="COVID-19;" title="Jan_23_2020" titleWrapped="Jan_23_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="003" uniqueTableId="COVID19_003">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="aa7d53b2-060d-4346-bf9a-685f91800316" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_003_Jan_23_2020_cases" label="Number of Cases on Jan 23 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="b82059fb-052f-4312-9ee2-a8b463b060fb" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_003_Jan_23_2020_deaths" label="Number of Deaths on Jan 23 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="e8c489e9-0220-45fd-8486-9335a04fd019" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_003_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="4a733e8d-d864-4a33-a0de-42ace717bee2" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_004" displayName="COVID19_004" DataCategories="COVID-19;" title="Jan_24_2020" titleWrapped="Jan_24_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="004" uniqueTableId="COVID19_004">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="5832af19-0b93-42e1-8109-63f6a09484b8" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_004_Jan_24_2020_cases" label="Number of Cases on Jan 24 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="182c1c14-bd3b-4623-8738-d3cbaf9a3ba4" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_004_Jan_24_2020_deaths" label="Number of Deaths on Jan 24 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="088e59ca-3a05-4047-b3e0-0138093939dc" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_004_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="fb9d42c6-d3f7-4893-84ed-23807fbc62bf" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_005" displayName="COVID19_005" DataCategories="COVID-19;" title="Jan_25_2020" titleWrapped="Jan_25_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="005" uniqueTableId="COVID19_005">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="3357bb0d-8288-41cb-bae4-4507d83cced0" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_005_Jan_25_2020_cases" label="Number of Cases on Jan 25 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="bdd085a3-8007-4323-8d85-e1b912794752" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_005_Jan_25_2020_deaths" label="Number of Deaths on Jan 25 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="b3bc19ba-5aae-416a-ac3e-49eb9d990313" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_005_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="e24694c1-60e1-4baa-9924-0c495c423804" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_006" displayName="COVID19_006" DataCategories="COVID-19;" title="Jan_26_2020" titleWrapped="Jan_26_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="006" uniqueTableId="COVID19_006">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="0588bf3b-27b4-43e9-8987-4489924dd41a" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_006_Jan_26_2020_cases" label="Number of Cases on Jan 26 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="5fbb5819-6705-48fe-94a7-12907fcc9b8c" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_006_Jan_26_2020_deaths" label="Number of Deaths on Jan 26 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="28cf2432-ede2-4c80-83b7-770574cad0d2" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_006_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="cd497a91-9b82-47b8-b13d-41115f78cad0" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_007" displayName="COVID19_007" DataCategories="COVID-19;" title="Jan_27_2020" titleWrapped="Jan_27_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="007" uniqueTableId="COVID19_007">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="9e4fe681-7f9e-4d17-a69b-b4bce21d9c82" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_007_Jan_27_2020_cases" label="Number of Cases on Jan 27 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="12f279d3-a5e6-45af-b0e7-975669ddba91" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_007_Jan_27_2020_deaths" label="Number of Deaths on Jan 27 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="44f96667-4997-48b7-b1ec-283deec688d8" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_007_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="30eebfcc-2cc4-4c87-a94c-5266a7614df3" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_008" displayName="COVID19_008" DataCategories="COVID-19;" title="Jan_28_2020" titleWrapped="Jan_28_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="008" uniqueTableId="COVID19_008">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="5ab3716c-96c2-4630-ac83-cfaedbafd2b3" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_008_Jan_28_2020_cases" label="Number of Cases on Jan 28 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="9bbffef4-69a7-4c09-b45c-5e62c891b774" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_008_Jan_28_2020_deaths" label="Number of Deaths on Jan 28 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="0dea020a-b3ff-4c85-99c1-b7dddca90a6e" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_008_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="44ca4453-f42d-4002-a5f4-c1876cc321a4" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_009" displayName="COVID19_009" DataCategories="COVID-19;" title="Jan_29_2020" titleWrapped="Jan_29_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="009" uniqueTableId="COVID19_009">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="a7bf919d-da93-4711-8401-bbce747e887f" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_009_Jan_29_2020_cases" label="Number of Cases on Jan 29 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="143ad9da-e66e-4c72-a0a5-ce3eb64aab87" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_009_Jan_29_2020_deaths" label="Number of Deaths on Jan 29 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="e75f9431-a244-428f-84d0-2ba991c4d60d" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_009_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="7541ee97-90d5-4ef3-a268-fe66a3b94eb2" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_010" displayName="COVID19_010" DataCategories="COVID-19;" title="Jan_30_2020" titleWrapped="Jan_30_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="010" uniqueTableId="COVID19_010">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="d804c8fc-3290-44e0-a077-d5322a865bac" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_010_Jan_30_2020_cases" label="Number of Cases on Jan 30 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="09ae5620-8389-498f-8baf-5b622f2ddfd0" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_010_Jan_30_2020_deaths" label="Number of Deaths on Jan 30 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="f86c8d31-44e8-4703-bcd8-6c3eb432ed6f" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_010_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="84bd2a77-427e-40bf-89ee-9687b0cfd075" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_011" displayName="COVID19_011" DataCategories="COVID-19;" title="Jan_31_2020" titleWrapped="Jan_31_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="011" uniqueTableId="COVID19_011">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="322f3693-1238-488b-8a92-d79b623a3547" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_011_Jan_31_2020_cases" label="Number of Cases on Jan 31 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="4c72093e-767e-45ad-ba0a-ce313f4c6f09" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_011_Jan_31_2020_deaths" label="Number of Deaths on Jan 31 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="a1b72e85-4d14-46bc-a2d0-68547696ab38" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_011_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="ec30d349-6312-4b09-b0a9-305607b3763e" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_012" displayName="COVID19_012" DataCategories="COVID-19;" title="Feb_1_2020" titleWrapped="Feb_1_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="012" uniqueTableId="COVID19_012">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="0f719613-02d5-4257-a7a6-96088d7e8fcc" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_012_Feb_1_2020_cases" label="Number of Cases on Feb 1 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="03f38ae3-46a9-4fcc-bacc-a8fe0803730c" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_012_Feb_1_2020_deaths" label="Number of Deaths on Feb 1 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="5395760f-0c6e-46d1-841d-510d1db3a75b" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_012_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="053abe7f-0c1e-4c42-8534-80722079c610" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_013" displayName="COVID19_013" DataCategories="COVID-19;" title="Feb_2_2020" titleWrapped="Feb_2_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="013" uniqueTableId="COVID19_013">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="f7f34676-66ec-4738-8650-03bb99e7814d" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_013_Feb_2_2020_cases" label="Number of Cases on Feb 2 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="7e1998d0-0cc3-4442-ac6b-40a9da190b43" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_013_Feb_2_2020_deaths" label="Number of Deaths on Feb 2 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="92b1cf5c-4cb4-4502-ac02-fd0801d9c85a" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_013_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="9d6c7a20-fe7f-4dc0-a736-2da20d722173" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_014" displayName="COVID19_014" DataCategories="COVID-19;" title="Feb_3_2020" titleWrapped="Feb_3_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="014" uniqueTableId="COVID19_014">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="647c5721-0475-4eb1-902b-abaa199bf1c9" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_014_Feb_3_2020_cases" label="Number of Cases on Feb 3 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="53ffabc8-e11f-424d-b669-8d5eb306bef9" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_014_Feb_3_2020_deaths" label="Number of Deaths on Feb 3 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="bd60b835-ae68-4091-8477-7fd8b089c1c9" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_014_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="eb67fefb-17ad-4897-810d-171406138d26" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_015" displayName="COVID19_015" DataCategories="COVID-19;" title="Feb_4_2020" titleWrapped="Feb_4_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="015" uniqueTableId="COVID19_015">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="6924c406-b8bc-4237-878f-a7f0df233b07" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_015_Feb_4_2020_cases" label="Number of Cases on Feb 4 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="0a6cb731-3447-4825-8dfc-4fbeca91c582" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_015_Feb_4_2020_deaths" label="Number of Deaths on Feb 4 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="1213cbf7-d40d-421b-ba25-90a24c094846" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_015_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="b77375a6-b0f1-4042-bf12-9291778c6d12" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_016" displayName="COVID19_016" DataCategories="COVID-19;" title="Feb_5_2020" titleWrapped="Feb_5_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="016" uniqueTableId="COVID19_016">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="6f346f68-2790-4ce8-a8ac-70fba7f50a09" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_016_Feb_5_2020_cases" label="Number of Cases on Feb 5 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="23de548a-a070-4750-8ccc-d631e34fd875" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_016_Feb_5_2020_deaths" label="Number of Deaths on Feb 5 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="c001d2ac-25bb-4ac7-ad6f-7f0f3990a10d" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_016_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="16065e00-e60c-4f91-b92f-a309676f9447" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_017" displayName="COVID19_017" DataCategories="COVID-19;" title="Feb_6_2020" titleWrapped="Feb_6_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="017" uniqueTableId="COVID19_017">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="43a2ea53-9596-489e-9c5d-8a92cae0ab90" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_017_Feb_6_2020_cases" label="Number of Cases on Feb 6 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="933dbdc8-2044-40bd-8329-fadb8abaef62" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_017_Feb_6_2020_deaths" label="Number of Deaths on Feb 6 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="40efd48d-2555-40d9-a986-ca8a040ea029" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_017_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="79139b62-2c0d-4a12-99f3-83184f53a5ca" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_018" displayName="COVID19_018" DataCategories="COVID-19;" title="Feb_7_2020" titleWrapped="Feb_7_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="018" uniqueTableId="COVID19_018">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="217f6011-b77e-470f-9676-ea60cda72041" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_018_Feb_7_2020_cases" label="Number of Cases on Feb 7 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="044c658f-2601-4ea3-b8d8-04945171a2cc" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_018_Feb_7_2020_deaths" label="Number of Deaths on Feb 7 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="c9b9132e-06d0-4a71-a546-47f55a899671" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_018_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="7aee5e51-c485-4da0-952d-6dfac3d625b0" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_019" displayName="COVID19_019" DataCategories="COVID-19;" title="Feb_8_2020" titleWrapped="Feb_8_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="019" uniqueTableId="COVID19_019">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="546cd796-0e56-4b6f-b4ea-07a261c35200" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_019_Feb_8_2020_cases" label="Number of Cases on Feb 8 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="02ace43a-9d6d-47cc-a99a-1d4c3d098d83" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_019_Feb_8_2020_deaths" label="Number of Deaths on Feb 8 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="f2a6351a-f308-4ebd-9965-8d4a168eee06" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_019_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="6642e5d5-4140-495e-b317-eca982a44dc8" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_020" displayName="COVID19_020" DataCategories="COVID-19;" title="Feb_9_2020" titleWrapped="Feb_9_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="020" uniqueTableId="COVID19_020">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="dfb3a046-7390-4df1-8a6e-1abce2b480e5" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_020_Feb_9_2020_cases" label="Number of Cases on Feb 9 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="38fe0bde-97b2-4bac-9b5c-645191f806ed" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_020_Feb_9_2020_deaths" label="Number of Deaths on Feb 9 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="cb7eb04b-f98b-4e91-a363-25d98ac26834" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_020_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="b328c02e-b366-418f-9580-fee4d8b5c368" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_021" displayName="COVID19_021" DataCategories="COVID-19;" title="Feb_10_2020" titleWrapped="Feb_10_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="021" uniqueTableId="COVID19_021">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="8a8c9966-a8b0-4903-a360-6e114a0b363c" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_021_Feb_10_2020_cases" label="Number of Cases on Feb 10 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="122dfce5-bd41-454a-a619-0004b06ebe3a" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_021_Feb_10_2020_deaths" label="Number of Deaths on Feb 10 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="31ac933f-1851-4fce-bd4c-e80c3f517974" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_021_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="b17daca9-d86a-4e10-bbf8-cca001c6a943" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_022" displayName="COVID19_022" DataCategories="COVID-19;" title="Feb_11_2020" titleWrapped="Feb_11_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="022" uniqueTableId="COVID19_022">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="d8cfab66-20e9-41f5-8b49-032487496a92" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_022_Feb_11_2020_cases" label="Number of Cases on Feb 11 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="7d8ca941-1bf3-467f-8835-15ce532d4170" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_022_Feb_11_2020_deaths" label="Number of Deaths on Feb 11 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="d953fb3c-9340-4dc1-a57f-79bcba61f1c9" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_022_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="f38dfc40-bbfb-465e-adbb-394ead4e94d7" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_023" displayName="COVID19_023" DataCategories="COVID-19;" title="Feb_12_2020" titleWrapped="Feb_12_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="023" uniqueTableId="COVID19_023">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="025de739-ab73-4cf4-bc45-bb72a29ede1d" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_023_Feb_12_2020_cases" label="Number of Cases on Feb 12 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="ca1c5f7f-2bdf-4dc2-bed9-43da3b9e9429" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_023_Feb_12_2020_deaths" label="Number of Deaths on Feb 12 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="e8619a6d-414a-479c-9e30-ba504f6a5aed" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_023_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="45df7f99-e652-42a6-a9bf-049947653489" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_024" displayName="COVID19_024" DataCategories="COVID-19;" title="Feb_13_2020" titleWrapped="Feb_13_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="024" uniqueTableId="COVID19_024">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="5fb84c75-4174-44ce-938c-89698389e775" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_024_Feb_13_2020_cases" label="Number of Cases on Feb 13 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="351c1f97-7cd8-4c07-8646-0851e1c3e6c6" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_024_Feb_13_2020_deaths" label="Number of Deaths on Feb 13 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="ccf46d90-3a1e-4228-bda3-90eb48fb5908" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_024_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="0ffa556f-80a4-40d9-adba-d2447f740beb" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_025" displayName="COVID19_025" DataCategories="COVID-19;" title="Feb_14_2020" titleWrapped="Feb_14_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="025" uniqueTableId="COVID19_025">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="933e0a96-33c5-4cc6-9fad-9e8e2561177b" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_025_Feb_14_2020_cases" label="Number of Cases on Feb 14 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="3fe18a1b-e3d8-4b80-8f05-01a2460565b5" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_025_Feb_14_2020_deaths" label="Number of Deaths on Feb 14 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="afd034ab-2b35-4312-af82-8ded994524fb" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_025_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="73237ce9-6279-4596-bd2b-14f0991cdeb9" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_026" displayName="COVID19_026" DataCategories="COVID-19;" title="Feb_15_2020" titleWrapped="Feb_15_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="026" uniqueTableId="COVID19_026">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="2784e766-1400-417b-9c45-15185e62a66f" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_026_Feb_15_2020_cases" label="Number of Cases on Feb 15 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="b7761b04-9269-463e-98c4-a59c7a9d41ed" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_026_Feb_15_2020_deaths" label="Number of Deaths on Feb 15 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="471a24e4-e378-4ebb-93cf-13a0af019a23" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_026_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="1e599ede-4250-4779-92be-0b43a6f42cc1" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_027" displayName="COVID19_027" DataCategories="COVID-19;" title="Feb_16_2020" titleWrapped="Feb_16_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="027" uniqueTableId="COVID19_027">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="c2c3b790-d351-43d3-83bf-87a205273a43" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_027_Feb_16_2020_cases" label="Number of Cases on Feb 16 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="339d3766-b8f4-4e7c-b89f-336b7f8940b3" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_027_Feb_16_2020_deaths" label="Number of Deaths on Feb 16 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="15c44c98-a97e-4c48-b2c5-601c323e2791" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_027_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="e7264033-1075-4123-aa89-35b3a715107d" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_028" displayName="COVID19_028" DataCategories="COVID-19;" title="Feb_17_2020" titleWrapped="Feb_17_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="028" uniqueTableId="COVID19_028">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="f0747421-1457-4813-a974-89e3e2c53513" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_028_Feb_17_2020_cases" label="Number of Cases on Feb 17 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="b560615e-9f3d-41d3-a474-4dbc311fa71a" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_028_Feb_17_2020_deaths" label="Number of Deaths on Feb 17 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="16d48ca8-fbf7-436b-a1e2-64fc5804e77c" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_028_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="e068d337-800a-43b2-b335-901d43732fff" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_029" displayName="COVID19_029" DataCategories="COVID-19;" title="Feb_18_2020" titleWrapped="Feb_18_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="029" uniqueTableId="COVID19_029">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="3d99dcf3-5cea-413c-9e5c-8f1ad5b227c2" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_029_Feb_18_2020_cases" label="Number of Cases on Feb 18 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="9ac14502-4c8d-414a-a9db-82c58278a37f" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_029_Feb_18_2020_deaths" label="Number of Deaths on Feb 18 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="dac771dc-402e-4779-ad7f-9921c6b2b2cf" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_029_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="67ab6b41-6ac8-4816-813a-4129c450d098" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_030" displayName="COVID19_030" DataCategories="COVID-19;" title="Feb_19_2020" titleWrapped="Feb_19_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="030" uniqueTableId="COVID19_030">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="8eff569c-ffd7-4d72-b836-cb6035c24a7f" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_030_Feb_19_2020_cases" label="Number of Cases on Feb 19 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="c9074ae9-6cb3-40dc-8b63-5ed5c64f8ae0" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_030_Feb_19_2020_deaths" label="Number of Deaths on Feb 19 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="7f3af6d3-8e05-4a09-a279-f7a2f5c87b27" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_030_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="c48f10a0-90ce-4ad9-8afd-fd6c82d5a8dd" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_031" displayName="COVID19_031" DataCategories="COVID-19;" title="Feb_20_2020" titleWrapped="Feb_20_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="031" uniqueTableId="COVID19_031">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="8dcc020f-b086-4bf2-b049-9ff3dfd3390e" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_031_Feb_20_2020_cases" label="Number of Cases on Feb 20 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="9925153a-a982-49ee-bf40-e4218c558c30" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_031_Feb_20_2020_deaths" label="Number of Deaths on Feb 20 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="888af089-95ea-4f67-8b7b-5af787909da8" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_031_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="3b69ef10-cd7e-4bb8-92fb-b5f394fa4b4b" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_032" displayName="COVID19_032" DataCategories="COVID-19;" title="Feb_21_2020" titleWrapped="Feb_21_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="032" uniqueTableId="COVID19_032">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="2cdf7cfa-18e6-4fe1-baba-c27f7096ac18" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_032_Feb_21_2020_cases" label="Number of Cases on Feb 21 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="e8851c6b-1166-4671-b3f6-b1725f219395" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_032_Feb_21_2020_deaths" label="Number of Deaths on Feb 21 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="7fab17f0-cef7-40e2-a159-26b9a7a466fe" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_032_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="88043077-89d9-4841-8787-f5c62a3b078a" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_033" displayName="COVID19_033" DataCategories="COVID-19;" title="Feb_22_2020" titleWrapped="Feb_22_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="033" uniqueTableId="COVID19_033">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="c36ff0fd-0164-4693-bf76-be102a7408b4" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_033_Feb_22_2020_cases" label="Number of Cases on Feb 22 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="eed5863b-6054-41b5-8bfa-497c1d4da13a" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_033_Feb_22_2020_deaths" label="Number of Deaths on Feb 22 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="c8eab303-56c8-468b-aa35-47b8dd91436b" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_033_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="a5dff306-1e1c-425c-8029-c2b7e6cb80b8" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_034" displayName="COVID19_034" DataCategories="COVID-19;" title="Feb_23_2020" titleWrapped="Feb_23_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="034" uniqueTableId="COVID19_034">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="3e01ad61-a477-41d2-b19f-69e70714e88e" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_034_Feb_23_2020_cases" label="Number of Cases on Feb 23 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="59329ffd-3be9-4cc4-bbce-7c7a84bb327d" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_034_Feb_23_2020_deaths" label="Number of Deaths on Feb 23 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="2ef8dcfe-dfa9-4447-898c-e4bcfc801c0e" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_034_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="e8d313d2-6812-4354-9916-5177880e3036" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_035" displayName="COVID19_035" DataCategories="COVID-19;" title="Feb_24_2020" titleWrapped="Feb_24_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="035" uniqueTableId="COVID19_035">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="ca3131da-53db-4e2b-a1aa-784c7a209eae" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_035_Feb_24_2020_cases" label="Number of Cases on Feb 24 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="a2d6bdee-61cb-471e-b0e8-9f2f6de29ab1" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_035_Feb_24_2020_deaths" label="Number of Deaths on Feb 24 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="53ae4c73-017a-47da-8438-4caa86a0f78e" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_035_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="5b6f7426-d3c3-46f1-84eb-ffaacc55c7a6" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_036" displayName="COVID19_036" DataCategories="COVID-19;" title="Feb_25_2020" titleWrapped="Feb_25_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="036" uniqueTableId="COVID19_036">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="235fa011-46c8-4300-967f-de75d47fe057" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_036_Feb_25_2020_cases" label="Number of Cases on Feb 25 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="f9c2a8d1-765c-44de-95b1-ffb1e21ac538" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_036_Feb_25_2020_deaths" label="Number of Deaths on Feb 25 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="82aa45bb-fa14-4eaa-8ba4-f3d41d3d2986" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_036_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="2f308d90-f364-4911-9691-36246bc136f1" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_037" displayName="COVID19_037" DataCategories="COVID-19;" title="Feb_26_2020" titleWrapped="Feb_26_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="037" uniqueTableId="COVID19_037">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="4dfdab80-f33b-4e14-8922-575a9c3a08a7" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_037_Feb_26_2020_cases" label="Number of Cases on Feb 26 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="9a804cc3-6b7a-491b-a552-2ba7132bd29e" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_037_Feb_26_2020_deaths" label="Number of Deaths on Feb 26 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="0c19e5a1-d916-43d7-9324-c63a47943ab2" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_037_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="4e2771fa-ac47-4994-a651-4ada460627b8" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_038" displayName="COVID19_038" DataCategories="COVID-19;" title="Feb_27_2020" titleWrapped="Feb_27_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="038" uniqueTableId="COVID19_038">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="1ce76959-ddab-4dc0-a883-f1c06ccfca8b" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_038_Feb_27_2020_cases" label="Number of Cases on Feb 27 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="1111fdf2-1121-4e98-9686-5d26fb34c9d2" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_038_Feb_27_2020_deaths" label="Number of Deaths on Feb 27 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="237ed45c-4653-4fe3-8d48-ccd853535dc4" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_038_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="c143392b-ecb8-437a-94f2-1d974ed35754" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_039" displayName="COVID19_039" DataCategories="COVID-19;" title="Feb_28_2020" titleWrapped="Feb_28_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="039" uniqueTableId="COVID19_039">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="a341fcba-aa11-47d7-8ec7-8a5931e90322" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_039_Feb_28_2020_cases" label="Number of Cases on Feb 28 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="ae8f7f37-dc71-435a-b766-a5ca0985590c" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_039_Feb_28_2020_deaths" label="Number of Deaths on Feb 28 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="c7ed5a4e-cdde-4845-9553-496ac065efc7" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_039_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="14694f57-f1e1-4c8d-b8d2-a6145a236480" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_040" displayName="COVID19_040" DataCategories="COVID-19;" title="Feb_29_2020" titleWrapped="Feb_29_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="040" uniqueTableId="COVID19_040">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="b319be83-f78f-4210-a0e6-0ed8a6398b17" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_040_Feb_29_2020_cases" label="Number of Cases on Feb 29 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="848b11aa-234f-4a0a-b403-fb10bcb16e14" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_040_Feb_29_2020_deaths" label="Number of Deaths on Feb 29 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="ef4ab4b5-e345-483d-8ceb-c6c47457c966" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_040_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="ad9b3257-5487-4149-b87e-ab4c5364b5e0" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_041" displayName="COVID19_041" DataCategories="COVID-19;" title="Mar_1_2020" titleWrapped="Mar_1_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="041" uniqueTableId="COVID19_041">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="eadb4f08-b662-4500-8bf3-4b7fab7df8c5" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_041_Mar_1_2020_cases" label="Number of Cases on Mar 1 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="e3a9975b-3776-4de7-92eb-f287e827d3ff" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_041_Mar_1_2020_deaths" label="Number of Deaths on Mar 1 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="ca366ea7-0550-442e-9373-f25b582e7146" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_041_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="e82e8c66-6e28-43e0-860e-b2eac1647560" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_042" displayName="COVID19_042" DataCategories="COVID-19;" title="Mar_2_2020" titleWrapped="Mar_2_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="042" uniqueTableId="COVID19_042">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="bcb1bdc4-da81-4514-8ba5-a99e829320d1" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_042_Mar_2_2020_cases" label="Number of Cases on Mar 2 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="92fd519c-2d89-40e7-ba61-36f91491e0c9" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_042_Mar_2_2020_deaths" label="Number of Deaths on Mar 2 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="af7919e2-f539-47ea-9d65-204993e33d1c" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_042_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="536499c1-669a-42ce-bca6-dfd28b4e3e07" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_043" displayName="COVID19_043" DataCategories="COVID-19;" title="Mar_3_2020" titleWrapped="Mar_3_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="043" uniqueTableId="COVID19_043">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="1b1d5769-45db-41d4-8bcd-cd5caab8f739" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_043_Mar_3_2020_cases" label="Number of Cases on Mar 3 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="8737a30f-f4e7-455b-a469-b7109e247662" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_043_Mar_3_2020_deaths" label="Number of Deaths on Mar 3 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="f5b340ff-173e-4ea4-a680-7a37e1ff7456" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_043_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="56be8ba8-0c1a-438b-b40c-7d10ff78611d" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_044" displayName="COVID19_044" DataCategories="COVID-19;" title="Mar_4_2020" titleWrapped="Mar_4_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="044" uniqueTableId="COVID19_044">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="966032ef-9f4b-463c-a0b1-5a736b3e71ed" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_044_Mar_4_2020_cases" label="Number of Cases on Mar 4 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="5420f8a8-2c20-415a-bcfc-108abe717a10" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_044_Mar_4_2020_deaths" label="Number of Deaths on Mar 4 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="3446881f-04bb-4c38-868f-cb54ef636df1" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_044_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="6ce70881-03e3-4272-8b7b-3fad31284c68" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_045" displayName="COVID19_045" DataCategories="COVID-19;" title="Mar_5_2020" titleWrapped="Mar_5_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="045" uniqueTableId="COVID19_045">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="0283555c-3c50-4bda-bf69-c62627a706e0" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_045_Mar_5_2020_cases" label="Number of Cases on Mar 5 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="bf6c7450-e425-4c5d-b87d-76f49c152cfa" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_045_Mar_5_2020_deaths" label="Number of Deaths on Mar 5 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="b850542c-301b-4257-ac85-47226ae8ebb3" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_045_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="6271d0fb-f52f-4b30-b06f-1585419bd118" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_046" displayName="COVID19_046" DataCategories="COVID-19;" title="Mar_6_2020" titleWrapped="Mar_6_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="046" uniqueTableId="COVID19_046">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="963d475e-8781-4cc8-99e2-afff0cfbb845" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_046_Mar_6_2020_cases" label="Number of Cases on Mar 6 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="fe704350-1b51-49f3-bc6d-1985c0f3c202" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_046_Mar_6_2020_deaths" label="Number of Deaths on Mar 6 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="19940c3a-8452-448b-addd-bbec3ca018b2" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_046_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="e4465624-16db-4935-8c00-3804b1619f7f" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_047" displayName="COVID19_047" DataCategories="COVID-19;" title="Mar_7_2020" titleWrapped="Mar_7_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="047" uniqueTableId="COVID19_047">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="33bceadc-ff2b-45d2-a84f-39637199b233" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_047_Mar_7_2020_cases" label="Number of Cases on Mar 7 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="47ba31cf-4f0f-4eac-918c-46fb38778f47" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_047_Mar_7_2020_deaths" label="Number of Deaths on Mar 7 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="90f7e200-ff5a-4eb3-ab37-8a7a28652b9f" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_047_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="c1539aa3-7e72-4309-8f18-c6f62e4a927b" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_048" displayName="COVID19_048" DataCategories="COVID-19;" title="Mar_8_2020" titleWrapped="Mar_8_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="048" uniqueTableId="COVID19_048">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="2e213bb5-9702-47c7-8ed7-3c9a555e5994" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_048_Mar_8_2020_cases" label="Number of Cases on Mar 8 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="988e1101-9e2b-4593-aa45-80a1ac59c253" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_048_Mar_8_2020_deaths" label="Number of Deaths on Mar 8 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="6f961c6c-ce99-4b60-a4aa-445e9b10007b" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_048_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="47bfd8ec-f629-4cec-aece-5f2a68976e3a" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_049" displayName="COVID19_049" DataCategories="COVID-19;" title="Mar_9_2020" titleWrapped="Mar_9_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="049" uniqueTableId="COVID19_049">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="6af9cbd1-edb1-4449-9380-d1662de10b05" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_049_Mar_9_2020_cases" label="Number of Cases on Mar 9 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="1b58473a-ed0a-457f-8842-7b770b413feb" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_049_Mar_9_2020_deaths" label="Number of Deaths on Mar 9 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="c036a3eb-3d2b-41f6-9e27-86d3aa7a1a9a" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_049_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="e313d2c7-70e3-4257-b3f1-8ccc8d0ee078" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_050" displayName="COVID19_050" DataCategories="COVID-19;" title="Mar_10_2020" titleWrapped="Mar_10_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="050" uniqueTableId="COVID19_050">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="2e069584-02c7-4e58-b47e-82de95beb8a4" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_050_Mar_10_2020_cases" label="Number of Cases on Mar 10 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="02b2f80a-313f-4106-8a81-ae06ab6f3d13" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_050_Mar_10_2020_deaths" label="Number of Deaths on Mar 10 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="6706e2f6-589a-4987-9891-61d83c015ec2" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_050_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="3c8a4729-4c25-4635-b067-698901c4a979" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_051" displayName="COVID19_051" DataCategories="COVID-19;" title="Mar_11_2020" titleWrapped="Mar_11_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="051" uniqueTableId="COVID19_051">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="36f6cabf-2a2d-4d90-beea-d2907dde766b" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_051_Mar_11_2020_cases" label="Number of Cases on Mar 11 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="e96a3ffe-fa2c-470c-97c4-d0674335c88f" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_051_Mar_11_2020_deaths" label="Number of Deaths on Mar 11 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="061c8ce0-9a31-413a-a3f9-b042f32da59f" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_051_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="d95fab17-bb16-4569-89c6-08549d6f9a84" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_052" displayName="COVID19_052" DataCategories="COVID-19;" title="Mar_12_2020" titleWrapped="Mar_12_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="052" uniqueTableId="COVID19_052">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="ff1dcd6b-cdac-48cc-b2b9-4eba55adb4ec" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_052_Mar_12_2020_cases" label="Number of Cases on Mar 12 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="ec2c76a6-370e-4bf6-8f9d-74491f8f22da" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_052_Mar_12_2020_deaths" label="Number of Deaths on Mar 12 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="7d4a5fc5-455c-4595-8d5f-cb65f27a4135" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_052_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="8cd3ff3f-4a3f-4048-8f57-da33d5c09013" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_053" displayName="COVID19_053" DataCategories="COVID-19;" title="Mar_13_2020" titleWrapped="Mar_13_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="053" uniqueTableId="COVID19_053">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="3eece5a3-decc-4804-a76e-3d942b934abb" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_053_Mar_13_2020_cases" label="Number of Cases on Mar 13 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="66aec5c8-31d7-49e8-ad47-6614518ab3d0" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_053_Mar_13_2020_deaths" label="Number of Deaths on Mar 13 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="465465a0-572a-468a-b77d-26f31bba6d5d" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_053_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="c2f546a9-32c3-4c53-80c1-4ee556d9178d" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_054" displayName="COVID19_054" DataCategories="COVID-19;" title="Mar_14_2020" titleWrapped="Mar_14_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="054" uniqueTableId="COVID19_054">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="c912be4e-108f-4eab-9d7e-563778e58cc4" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_054_Mar_14_2020_cases" label="Number of Cases on Mar 14 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="b60bd818-9bca-4723-bbb6-11f428f360ab" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_054_Mar_14_2020_deaths" label="Number of Deaths on Mar 14 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="5400eace-e495-4438-bb7c-7ee26f39f400" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_054_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="26e578ef-3aac-4026-b634-c0b0d0088ce3" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_055" displayName="COVID19_055" DataCategories="COVID-19;" title="Mar_15_2020" titleWrapped="Mar_15_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="055" uniqueTableId="COVID19_055">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="4228f086-f385-4ea7-9d17-d4bafbe10628" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_055_Mar_15_2020_cases" label="Number of Cases on Mar 15 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="d883b2b0-b2f6-478e-929e-febb551e19da" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_055_Mar_15_2020_deaths" label="Number of Deaths on Mar 15 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="cc7aaa05-73fe-4df9-870f-8a32badf6842" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_055_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="1d722253-3c40-4d56-a04d-73c452c7615a" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_056" displayName="COVID19_056" DataCategories="COVID-19;" title="Mar_16_2020" titleWrapped="Mar_16_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="056" uniqueTableId="COVID19_056">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="aad3ce56-ffb2-4f90-b4a6-abcda4c8c3bb" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_056_Mar_16_2020_cases" label="Number of Cases on Mar 16 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="86fd50aa-cd66-40ba-96b9-1b4e269e0b97" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_056_Mar_16_2020_deaths" label="Number of Deaths on Mar 16 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="b03f03e9-abfa-404b-a0f5-db9129476e99" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_056_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="55fb1522-0b11-4c36-98c4-99ca19267eeb" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_057" displayName="COVID19_057" DataCategories="COVID-19;" title="Mar_17_2020" titleWrapped="Mar_17_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="057" uniqueTableId="COVID19_057">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="e3bb2bf2-e9ad-4384-8ddd-1ab652e9204a" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_057_Mar_17_2020_cases" label="Number of Cases on Mar 17 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="c6d8e5fc-eb23-404a-a40c-6176a8a41bf9" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_057_Mar_17_2020_deaths" label="Number of Deaths on Mar 17 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="4c5447d6-e80b-4fdd-b842-2d55354967bf" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_057_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="ce171770-0125-4ee6-8284-c631c3d4cd50" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_058" displayName="COVID19_058" DataCategories="COVID-19;" title="Mar_18_2020" titleWrapped="Mar_18_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="058" uniqueTableId="COVID19_058">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="7880b998-20bc-41ea-a099-4ef9bddaae9b" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_058_Mar_18_2020_cases" label="Number of Cases on Mar 18 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="3e5a5654-5085-4be2-8bd1-0411a0366f50" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_058_Mar_18_2020_deaths" label="Number of Deaths on Mar 18 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="a3f54992-3d74-470d-acf7-6b8e49ba3ec4" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_058_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="4ac984c9-677b-4632-a014-fbf5d7eb3933" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_059" displayName="COVID19_059" DataCategories="COVID-19;" title="Mar_19_2020" titleWrapped="Mar_19_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="059" uniqueTableId="COVID19_059">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="eb8e0d62-06b6-47d9-9d2d-3996d5d509c4" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_059_Mar_19_2020_cases" label="Number of Cases on Mar 19 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="e0561275-d5ed-4d98-9aa7-459a84173735" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_059_Mar_19_2020_deaths" label="Number of Deaths on Mar 19 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="f0a4b52d-3aa3-46fd-bf70-653c8b1f1043" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_059_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="2296b45d-5e5c-4f30-a118-1f47ce7f9fe3" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_060" displayName="COVID19_060" DataCategories="COVID-19;" title="Mar_20_2020" titleWrapped="Mar_20_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="060" uniqueTableId="COVID19_060">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="5e806a51-9240-42f6-8901-40d40c7ba7e9" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_060_Mar_20_2020_cases" label="Number of Cases on Mar 20 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="e88a978d-0ad1-46f2-acbd-efe36ea990e7" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_060_Mar_20_2020_deaths" label="Number of Deaths on Mar 20 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="7f14243f-e863-4b4c-b250-cf7e1033ae7f" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_060_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="5f6ec575-5ae8-4eee-9e9b-dd279a6b7253" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_061" displayName="COVID19_061" DataCategories="COVID-19;" title="Mar_21_2020" titleWrapped="Mar_21_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="061" uniqueTableId="COVID19_061">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="fd362349-7bbf-4e3f-b421-f4012ea0cee3" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_061_Mar_21_2020_cases" label="Number of Cases on Mar 21 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="e0fde9e3-bdd8-4ae2-b6ad-726cb8e7f01d" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_061_Mar_21_2020_deaths" label="Number of Deaths on Mar 21 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="a72f0442-2cbd-421e-adcf-5406a6b9bf1e" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_061_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="3c9c51f7-27cd-4bf0-97cc-5d084c8b05f1" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_062" displayName="COVID19_062" DataCategories="COVID-19;" title="Mar_22_2020" titleWrapped="Mar_22_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="062" uniqueTableId="COVID19_062">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="743ac007-be42-453a-9cda-5e6ef780a743" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_062_Mar_22_2020_cases" label="Number of Cases on Mar 22 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="4605e1c2-d9fe-4790-9d3d-2f3e9bb176a2" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_062_Mar_22_2020_deaths" label="Number of Deaths on Mar 22 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="e3d91908-e8d8-4f7b-b3ec-3ec033fd3f02" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_062_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="a31bfc9d-e406-4df6-b194-c05483baa753" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_063" displayName="COVID19_063" DataCategories="COVID-19;" title="Mar_23_2020" titleWrapped="Mar_23_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="063" uniqueTableId="COVID19_063">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="916d62cf-aa3f-4534-b795-9c8ddd7ebe91" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_063_Mar_23_2020_cases" label="Number of Cases on Mar 23 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="b89116c5-28ad-4b35-af3f-9526e7c8ddd1" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_063_Mar_23_2020_deaths" label="Number of Deaths on Mar 23 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="892fb58a-9315-448d-9a94-a1eb824fcbd1" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_063_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="de535c71-2d97-4ea7-9f17-0b5b82dcf102" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_064" displayName="COVID19_064" DataCategories="COVID-19;" title="Mar_24_2020" titleWrapped="Mar_24_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="064" uniqueTableId="COVID19_064">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="5e0ace4c-c740-4149-bfdc-3f97c16aef54" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_064_Mar_24_2020_cases" label="Number of Cases on Mar 24 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="7e302823-b4b3-4bf8-a3e0-ace728b62b4d" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_064_Mar_24_2020_deaths" label="Number of Deaths on Mar 24 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="67c60028-6526-4b26-9b6e-5fcc8c1929df" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_064_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="ce7a7bbb-fc64-4df9-b82b-d5d4286ab4f4" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_065" displayName="COVID19_065" DataCategories="COVID-19;" title="Mar_25_2020" titleWrapped="Mar_25_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="065" uniqueTableId="COVID19_065">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="75cb215b-4055-4807-98c6-df286f8fddd4" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_065_Mar_25_2020_cases" label="Number of Cases on Mar 25 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="1783069f-fbda-4052-a74b-13bb58f82364" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_065_Mar_25_2020_deaths" label="Number of Deaths on Mar 25 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="5c51af56-7e49-47a6-9bae-06c4df962b47" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_065_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="9397f8c6-1310-4aab-b07b-2b0b0cfe2765" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_066" displayName="COVID19_066" DataCategories="COVID-19;" title="Mar_26_2020" titleWrapped="Mar_26_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="066" uniqueTableId="COVID19_066">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="24797738-06a2-4d6f-ad33-d455cd3a389b" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_066_Mar_26_2020_cases" label="Number of Cases on Mar 26 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="506ae564-ee72-4a94-9273-ad049c75e169" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_066_Mar_26_2020_deaths" label="Number of Deaths on Mar 26 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="368cee52-a7ff-4f88-8a03-a56022308413" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_066_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="60deeb2f-9eeb-497f-bc76-9a551a004e67" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_067" displayName="COVID19_067" DataCategories="COVID-19;" title="Mar_27_2020" titleWrapped="Mar_27_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="067" uniqueTableId="COVID19_067">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="df8d8e7d-bc9e-49c2-bdc8-93b3a53d2806" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_067_Mar_27_2020_cases" label="Number of Cases on Mar 27 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="cb0947e5-e2c0-4abe-9ccd-372c643bf174" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_067_Mar_27_2020_deaths" label="Number of Deaths on Mar 27 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="c8fe9249-e5bf-4fb0-a9d9-26735cdd328b" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_067_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+      <tables>
+        <table GUID="c7c0f20a-afc7-4a1f-802c-bab7f1f0a7dd" VariablesAreExclusive="false" DollarYear="0" PercentBaseMin="1" name="COVID19_068" displayName="COVID19_068" DataCategories="COVID-19;" title="Mar_28_2020" titleWrapped="Mar_28_2020" universe="none" Visible="true" TreeNodeCollapsed="true" CategoryPriorityOrder="0" ShowOnFirstPageOfCategoryListing="false" DbTableSuffix="068" uniqueTableId="COVID19_068">
+          <OutputFormat TableTitle="" TableUniverse="">
+            <Columns/>
+          </OutputFormat>
+          <variable GUID="d652fd7c-7862-4d35-8e0c-a110dcd76012" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_068_Mar_28_2020_cases" label="Number of Cases on Mar 28 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="1330bb0f-0898-46e9-9609-e7af6dfc33ae" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_068_Mar_28_2020_deaths" label="Number of Deaths on Mar 28 2020" qLabel="" indent="0" dataType="7" dataTypeLength="0" formatting="9" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+          <variable GUID="bc07903d-a801-4187-8fdf-c0b346edf7be" UVID="" BracketSourceVarGUID="" BracketFromVal="0" BracketToVal="0" BracketType="None" FirstInBracketSet="false" notes="" PrivateNotes="" name="COVID19_068_Date" label="Date" qLabel="" indent="0" dataType="2" dataTypeLength="0" formatting="0" customFormatStr="" FormulaFunctionBodyCSharp="" suppType="0" SuppField="" suppFlags="" aggMethod="1" DocLinksAsString="" AggregationStr="Add"/>
+        </table>
+      </tables>
+    </SurveyDataset>
+  </SurveyDatasets>
+  <Categories>
+    <string>,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,</string>
+  </Categories>
+</survey>

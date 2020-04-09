@@ -1,0 +1,50 @@
+projectName: "Coronavirus Case Data"                         # Descriptive name of the project, this will be used as display name in metadata file (CDC_HEALTH_2020)
+projectId: projects "COVID19" # used as a prefix for table names and also as a display name in metadata file
+connectionString: "Server=prime; database=; uid=sewebsite3;pwd=Granted128;Connect Timeout=1;Pooling=True" # connection string to a database for metadata file
+databaseName: covid_data
+projectYear: '2020'
+server: prime #PRIME\MSSQLSERVER3
+metadataFileName: COVID19.xml
+variableDefinitionsPath: c:\projects\DataTeam\Projects\COVID19\Input Scripts\Config Files\variable_descriptions.txt # file with variable descriptions
+connectionCredentialsName: prime
+serverName: prime
+tableDefinitionsPath: c:\projects\DataTeam\Projects\COVID19\Input Scripts\Config Files\table_definitions.csv      # list of files to be processed, necessary for file order, leave blank ('') if you don't care for file name order
+sourceDirectory: C:\Users\Datasoft\projects\covid19\preprocess\                                        # this is a directory with data for processing
+metadataOutputPath: C:\Users\Datasoft\projects\covid19\output\
+configDirectory: c:\projects\DataTeam\Projects\COVID19\Input Scripts\Config Files\ #..\Input Scripts\Config Files\ # directory with geo_level_information,all_geotypes_and_sumlev,geoDivisionsBydatasetId
+trustedConnection: no # used when db credentials are not required but windows authentication is used instead, if server is set to prime set this to "no"
+tableNumberingStartsFrom: 1
+maxTableWidth: 200
+sqlServerDriverName: SQL+Server+Native+Client+10.0
+state_github_raw_data: C:\Users\Datasoft\projects\covid19\raw_data\us-states.csv
+county_github_raw_data: C:\Users\Datasoft\projects\covid19\raw_data\us-counties.csv
+geo_acs18_5yr_raw_data: C:\Users\Datasoft\projects\covid19\raw_data\geo_data_acs18_5yr.csv
+state_missing_geo: C:\Users\Datasoft\projects\covid19\raw_data\state_geo_missing_fips.csv
+acs_data_location: C:\Users\Datasoft\projects\covid19\raw_data\
+
+#########################################################################################################
+# geo level information, Geo_level, Geo_level_name, FIPS length, PARTIAL FIPS length
+#########################################################################################################
+
+geoLevelInformation:
+
+# THE FIRST GEO LEVEL SUCH AS UNITED STATES, WORLD, CANADA, UK, EUROPE, ETC MUST HAVE SHORTER FIPS CODE LENGHT THAN ANY OTHER GEO NESTED UNDER
+
+    -
+        - SL010 # Geo_level
+        - Nation    # Geo_level_name
+        - "0"    # FIPS_length
+        - "0"    # PARTIAL_FIPS_length
+        - "0"    # Indent
+    -
+        - SL040 # Geo_level
+        - State    # Geo_level_name
+        - "2"    # FIPS_length
+        - "2"    # PARTIAL_FIPS_length
+        - "1"    # Indent
+    -
+        - SL050 # Geo_level
+        - County    # Geo_level_name
+        - "5"    # FIPS_length
+        - "3"    # PARTIAL_FIPS_length
+        - "2"    # Indent
