@@ -38,8 +38,11 @@ def calculate_brackets(last_file_data, var_prefix):
     breaks = {}
     for variable_name, values in last_file_data.iteritems():
         if var_prefix in variable_name:
-            breaks[variable_name[len(var_prefix) + 1:]] = jenkspy.jenks_breaks(values, nb_class=11)
-
+            try:
+                breaks[variable_name[len(var_prefix) + 1:]] = jenkspy.jenks_breaks(values, nb_class=11)
+            except ValueError as e:
+                logger.warning(f'Cannot create a cupoint file for variable {variable_name}, error: {e}')
+                continue
     return breaks
 
 

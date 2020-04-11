@@ -14,7 +14,8 @@ import scripts.compute_additional_columns as compute_aditional_columns
 import scripts.get_existing_guids_from_xml as existing_xml_guids
 import scripts.generate_cutpoints as generate_cutpoints
 import scripts.get_data as get_data
-
+import scripts.output_for_visualist as output_for_visualist
+import scripts.push_to_vizualist_source_repo as push_to_vizualist_source_repo
 
 from loguru import logger
 
@@ -29,6 +30,8 @@ def main(processing_steps, config_path):
         'create_metadata_file_structure': create_metadata_file.create_metadata_file,
         'existing_xml_guids': existing_xml_guids.get_existing_guids,
         'generate_cutpoints': generate_cutpoints.generate_cutpoints_for_dataset,
+        'output_for_vizualist': output_for_visualist.prepare_and_write_output,
+        'push_to_vizualist_source_repo': push_to_vizualist_source_repo.push_content,
     }
 
     for step, params in processing_steps.items():
@@ -51,10 +54,12 @@ if __name__ == '__main__':
         'get_data': {},
         'preprocess_covid': {},
         'compute_additional_columns': {},
-        # 'process_and_load_data': {},
-        # 'create_metadata_file_structure': {},
-        # 'existing_xml_guids': {},
-        # 'generate_cutpoints': {},
+        'process_and_load_data': {},
+        'create_metadata_file_structure': {},
+        'existing_xml_guids': {},
+        'generate_cutpoints': {},
+        'output_for_vizualist': {},
+        'push_to_vizualist_source_repo': {},
     }
 
     main(steps, full_config_path)

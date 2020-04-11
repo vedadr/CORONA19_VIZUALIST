@@ -29,7 +29,7 @@ def load_config_file(config_file_path):
 
 def get_existing_guids(config_path):
 
-    # config = load_config_file(config_path)
+    config = load_config_file(config_path)
 
     tree = et.parse(config['metadataOutputPath'] + config['metadataFileName'])
     root = tree.getroot()
